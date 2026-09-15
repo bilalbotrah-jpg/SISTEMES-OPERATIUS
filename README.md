@@ -1,2 +1,0 @@
-# SISTEMES-OPERATIUS
-sistemes operatius
