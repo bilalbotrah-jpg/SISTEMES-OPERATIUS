@@ -124,7 +124,7 @@
       <p><strong>4.6</strong> Aquesta és nivell "estalviar temps" a les pràctiques. Amb un sol mkdir creem tres carpetes a la vegada, amb touch fabriquem diversos arxius buits de cop (txt i png), després fem servir un editor com nano per escriure-hi a dins, i amb cat nota1.txt llegim per pantalla el que hem escrit ("Bon dia", "Bona tarda...") sense obrir cap programa gràfic.</p>
       <img src="../img/Comandes6.png" alt="Comandes 6">
       
-      <p><strong>4.7</strong> Aquesta captura és com el treball final, fem de tot. Creem carpetes dins de carpetes de cop amb mkdir -p, guardem dades del sistema (uname), la data (date) i els usuaris (who) posant-ho tot dins d'un arxiu txt utilitzant > i >>, busquem coses concretes amb grep, copiem arxius amb cp, i al final guardem els nostres últims 15 comandaments amb history.</p>
+      <p><strong>4.7</strong> Aquesta captura és com el treball final, fem de tot. Creem carpetes dins de carpetes de cop amb mkdir -p, guardem dades del sistema (uname), la data (date) i els usuaris (who) posant-ho tot dins d'un arxiu txt utilitzant > i >>, busquem coses concretas amb grep, copiem arxius amb cp, i al final guardem els nostres últims 15 comandaments amb history.</p>
       <img src="../img/Comandes7.png" alt="Comandes 7">
       
       <p><strong>4.8</strong> Aquí ens posem en "mode déu" (administrador total) escrivint sudo su. Després d'un petit error escrivint malament la paraula, llancem sudo apt update perquè el sistema busqui a internet quins programes tenen actualitzacions, i després sudo apt upgrade -y perquè instal·li totes aquestes novetats de cop i sense preguntar-nos.</p>
@@ -139,18 +139,43 @@
     <article class="apartat" id="apartat5">
       <h2>5. Instal·lacions aplicacions</h2>
       
+      <p><strong>5.1</strong> Posem l'ordre lsb_release -a a la terminal i el sistema ens xiva exactament quin Linux portem. Ens diu que som a l'Ubuntu 24.04.5 LTS per tenir-ho clar abans de començar a instal·lar res.</p>
       <img src="../img/Aplicacions1.png" alt="Aplicacions 1">
+      
+      <p><strong>5.2</strong> Ens movem a Baixades i intentem instal·lar un joc del Pacman que teníem descarregat amb sudo apt install "./pacman_10-21build1_amd64.deb". Ens demana la contrasenya d'administrador i comença a processar el paquet per instal·lar-lo a l'ordinador.</p>
       <img src="../img/Aplicacions2.png" alt="Aplicacions 2">
+      
+      <p><strong>5.3</strong> Després de l'intent anterior, fem un dpkg -l | grep pacman per filtrar i veure si el programa s'ha instal·lat correctament. El resultat ens mostra un ii al costat de pacman, la qual cosa significa que està instal·lat i per funcionar.</p>
       <img src="../img/Aplicacions3.png" alt="Aplicacions 3">
+      
+      <p><strong>5.4</strong> Escrivim simplement pacman a la terminal i l'ordinador l'executa.</p>
       <img src="../img/Aplicacions4.png" alt="Aplicacions 4">
+      
+      <p><strong>5.5</strong> Se obre el joc del pacman per a poder jugar.</p>
       <img src="../img/Aplicacions5.png" alt="Aplicacions 5">
+      
+      <p><strong>5.6</strong> Com que ja ens hem cansat de jugar, decidim esborrar-lo amb sudo apt remove pacman. Confirmem amb una "s" quan ens pregunta si volem continuar, i després comprovem amb el dpkg que ja ha desaparegut per complet del sistema.</p>
       <img src="../img/Aplicacions6.png" alt="Aplicacions 6">
+      
+      <p><strong>5.7</strong> Anem a instal·lar un altre programa (l'editor Geany) però falla perquè necessita un autre arxiu previ que no tenim. Per arreglar aquest desastre de dependències trencades, tirem de la comanda de salvació: sudo apt --fix-broken install.</p>
       <img src="../img/Aplicacions7.png" alt="Aplicacions 7">
+      
+      <p><strong>5.8</strong> El sistema es descarrega el que faltava, arregla el trencament automàticament i ens deixa instal·lat el Geany. Per rematar-ho, escrivim geany --version i ens confirma que tenim la versió 2.0 instal·lada.</p>
       <img src="../img/Aplicacions8.png" alt="Aplicacions 8">
+      
+      <p><strong>5.9</strong> Escrivim directament geany a la línia de comandes i s'obre l'editor de codi de manera visual, veiem que la aplicacio esta instalada.</p>
       <img src="../img/Aplicacions9.png" alt="Aplicacions 9">
+      
+      <p><strong>5.10</strong> Per últim, si volem esborrar un programa però que no quedi ni rastre dels seus fitxers de configuració perduts, utilitzem sudo apt purge geany geany-common. Això fa una neteja total i deixa l'ordinador com si mai l'haguéssim posat.</p>
       <img src="../img/Aplicacions10.png" alt="Aplicacions 10">
+      
+      <p><strong>5.11</strong> Aquí executem l'ordre sudo apt install aptitude a la terminal. El sistema es posa a descarregar i instal·lar aquest gestor de paquets avançat (l'Aptitude), que serveix pràcticament per al mateix que l'apt però amb una interfície molt més xula i potent per gestionar aplicacions i dependències.</p>
       <img src="../img/Aplicacions11.png" alt="Aplicacions 11">
+      
+      <p><strong>5.12</strong> Fem servir l'Aptitude per instal·lar el programa d'edició d'imatge GIMP amb sudo aptitude install gimp. Com es veu a la pantalla, ens llista un munt de llibreries i dependències necessàries, i li diem que "Y" per acceptar i començar a descarregar tot el paquet.</p>
       <img src="../img/Aplicacions12.png" alt="Aplicacions 12">
+      
+      <p><strong>5.13</strong> Primer comprovem amb dpkg -l | grep gimp que el programa s'ha instal·lat perfectament (veiem els ii). Després intentem fer un sudo apt purge gimp per esborrar-lo del tot, però com que només esborra el paquet principal i no totes les llibreries que s'havien instal·lat de retruc, tornem a passar el filtre de l'inici per veure què ha quedat viu.</p>
       <img src="../img/Aplicacions13.png" alt="Aplicacions 13">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
