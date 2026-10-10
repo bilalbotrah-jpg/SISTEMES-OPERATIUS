@@ -82,11 +82,22 @@
     <article class="apartat" id="apartat3">
       <h2>3. Xarxa bàsica</h2>
       
+      <p><strong>3.1</strong> En aquesta imatge s'executa l'ordre ip a, que serveix per llistar i mostrar la configuració de totes les targetes i interfícies de xarxa de l'equip. El resultat ens permet veure que la connexió Wi-Fi (l'apartat anomenat wlp0s20f3) està activa i té assignada correctament l'adreça IP local 192.168.1.62 dins de la xarxa.</p>
       <img src="../img/Xarxabasica1.png" alt="Xarxa bàsica 1">
+      
+      <p><strong>3.2</strong> Aquí es fan servir ordres ping per comprovar si l'ordinador es pot comunicar correctament. Primer s'envien 4 paquets de dades a la pròpia adreça IP de l'equip per confirmar que la targeta de xarxa funciona bé internament (amb un 0% de pèrdua), i tot seguit es comença a comprovar la connexió exterior fent ping a la pàgina de Google.</p>
       <img src="../img/Xarxabasica2.png" alt="Xarxa bàsica 2">
+      
+      <p><strong>3.3</strong> Aquesta captura mostra la comprovació final de la connexió a internet enviant paquets d'informació tant al domini de google.com com a una IP pública numèrica (8.8.8.8). Com que tots dos processos acaben amb èxit i reben resposta, es demostra que l'ordinador navega per internet perfectament i que el sistema entén i tradueix bé les adreces web.</p>
       <img src="../img/Xarxabasica3.png" alt="Xarxa bàsica 3">
+      
+      <p><strong>3.4</strong> A l'última imatge s'utilitza l'ordre ip route per consultar la taula d'encaminament, que són les rutes que segueix l'ordinador per enviar informació a altres xarxes. El resultat més important és la primera línia (la ruta per defecte), que ens revela que la passarel·la o router té l'adreça IP 192.168.1.1, i és per on surten totes les dades cap a internet.</p>
       <img src="../img/Xarxabasica4.png" alt="Xarxa bàsica 4">
+      
+      <p><strong>3.5</strong> En aquesta captura s'executen dues ordres de terminal molt directes per obtenir informació ràpida de la xarxa. La primera ordre, ip r | grep default, s'utilitza per filtrar les rutes i mostrar exclusivament la línia que indica quina és la passarel·la o router principal de sortida (la 192.168.1.1). La segona ordre, hostname -I, és una drecera molt pràctica que llista únicament les adreces IP locals que té assignades l'ordinador en aquell moment, mostrant de forma neta i sense detalls extra la teva IP principal 192.168.1.62.</p>
       <img src="../img/Xarxabasica5.png" alt="Xarxa bàsica 5">
+      
+      <p><strong>3.6</strong> A la imatge s'observa l'entorn gràfic de configuració de xarxa del sistema operatiu, on s'estan definint els paràmetres de connexió de manera manual en lloc de fer-ho automàticament. Aquí es pot veure com s'ha establert una adreça IP fixa (192.168.1.62), la màscara de xarxa (255.255.255.0), la passarel·la per connectar-se al router (192.168.1.1) i el servidor DNS de Google (8.8.8.8), permetent controlar exactament quina configuració tindrà l'equip sense usar la terminal.</p>
       <img src="../img/Xarxabasica6.png" alt="Xarxa bàsica 6">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
