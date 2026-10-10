@@ -106,32 +106,32 @@
     <article class="apartat" id="apartat4">
       <h2>4. Comandes generals</h2>
       
-      <p><strong>4.1</strong> Es mostra l'ús de les comandes bàsiques de navegació i visualització a la terminal. L'ordre pwd indica el directori actual de treball, ls llista els fitxers del directori, ls -l ofereix informació detallada dels permisos i la mida, i ls -la inclou la visualització dels fitxers i directoris ocults.</p>
+      <p><strong>4.1</strong> Aquí comencem amb el funcionament bàsic de la terminal. Amb pwd el sistema mostra la ruta exacta de la carpeta on et trobes en aquest moment. L'ordre ls llista els fitxers generals de la carpeta, mentre que ls -l ofereix informació detallada com els permisos, el propietari i la grandària. Si s'afegeix el paràmetre -la (ls -la), es mostren absolutament tots els elements, incloent-hi els fitxers i carpetes ocultes que comencen per un punt.</p>
       <img src="../img/Comandes1.png" alt="Comandes 1">
       
-      <p><strong>4.2</strong> S'utilitza de nou l'ordre ls -la per comprovar el contingut del directori d'usuari i s'empra l'ordre cd Baixades/ per accedir al directori de descàrregues.</p>
+      <p><strong>4.2</strong> En aquesta captura es repeteix ls -la per revisar tots els elements disponibles a la carpeta d'usuari i, a continuació, s'utilitza la instrucció cd Baixades/. El comandament cd s'empra per canviar de directori i entrar a l'interior d'una carpeta específica.</p>
       <img src="../img/Comandes2.png" alt="Comandes 2">
       
-      <p><strong>4.3</strong> Dins de la carpeta de descàrregues, s'executa l'ordre ls -l per llistar de manera detallada tots els arxius emmagatzemats, incloent-hi documents, paquets i la imatge ISO del sistema.</p>
+      <p><strong>4.3</strong> Un cop dins del directori de descàrregues, s'executa ls -l per consultar el contingut emmagatzemat. Això genera un llistat complet de tasques, documents en PDF, arxius comprimits en format ZIP i la imatge ISO del sistema operatiu, amb un desglossament detallat de dates i mides.</p>
       <img src="../img/Comandes3.png" alt="Comandes 3">
       
-      <p><strong>4.4</strong> Es mostra la consulta del manual d'ajuda d'una comanda mitjançant l'ús de l'opció --help (en aquest cas, cd --help), la qual cosa permet consultar la sintaxi i les opcions disponibles.</p>
+      <p><strong>4.4</strong> Davant de qualsevol dubte sobre el funcionament d'una ordre durant una pràctica o examen, es pot utilitzar el sistema d'ajuda integrat. En escriure cd --help, la terminal mostra el manual tècnic oficial amb les opcions i paràmetres addicionals que accepta el comandament.</p>
       <img src="../img/Comandes4.png" alt="Comandes 4">
       
-      <p><strong>4.5</strong> Es demostra la creació d'un directori nou amb l'ordre mkdir Hola, el desplaçament a l'interior d'aquest amb cd Hola, i la utilització de l'ordre echo per mostrar un text per pantalla.</p>
+      <p><strong>4.5</strong> En aquest punt es creen elements des de zero. S'empra mkdir Hola per generar un directori nou anomenat així, s'hi accedeix amb cd Hola, i amb l'ordre echo "Hola" es fa que la terminal reprodueixi aquesta mateixa paraula directament per pantalla.</p>
       <img src="../img/Comandes5.png" alt="Comandes 5">
       
-      <p><strong>4.6</strong> Es realitza la creació simultània de múltiples directoris amb mkdir i de fitxers buits amb touch. També s'empra l'editor nano per modificar el contingut d'un arxiu i l'ordre cat per visualitzar-lo per pantalla.</p>
+      <p><strong>4.6</strong> Aquesta secció tracta de l'optimització de processos a la terminal. Amb una sola instrucció mkdir es creen múltiples carpetes simultàniament, i amb touch es generen diversos arxius buits de tipus text i imatge de cop. Posteriorment, s'utilitza un editor com nano per afegir contingut i s'empra cat nota1.txt per llegir el text generat directament des de la consola sense necessitat d'obrir cap interfície gràfica.</p>
       <img src="../img/Comandes6.png" alt="Comandes 6">
       
-      <p><strong>4.7</strong> S'apliquen operacions avançades com la creació de directoris imbricats amb mkdir -p, l'emmagatzematge de la informació del sistema (uname, date, who) en un fitxer de text mitjançant redireccions (> i >>), l'ús de grep per filtrar informació, la còpia de fitxers amb cp i la consulta de l'historial amb history.</p>
+      <p><strong>4.7</strong> Aquesta captura reflecteix una combinació d'operacions complexes. Es creen jerarquies de carpetes senceres de manera automàtica amb mkdir -p, s'emmagatzemen dades del sistema amb uname, la data amb date i els usuaris actius amb who redirigint el flux mitjançant > i >> cap a un arxiu de text. També s'hi inclou la cerca de patrons amb grep, la còpia de fitxers amb cp i la consulta dels últims quinze comandaments executats amb history.</p>
       <img src="../img/Comandes7.png" alt="Comandes 7">
       
-      <p><strong>4.8</strong> S'inicia la sessió d'administrador amb sudo su i s'executen les ordres d'actualització del sistema mitjançant sudo apt update i sudo apt upgrade -y per instal·lar les noves versions dels paquets de manera automàtica.</p>
+      <p><strong>4.8</strong> Aquí s'eleven els privilegis del sistema mitjançant sudo su. A continuació, s'executa sudo apt update per comprovar si hi ha paquets pendents d'actualització als repositoris d'internet, seguit de sudo apt upgrade -y per procedir a la instal·lació automàtica de totes les novetats sense requerir confirmació addicional.</p>
       <img src="../img/Comandos8.png" alt="Comandes 8">
       
-      <p><strong>4.9</strong> Es visualitza el procés d'instal·lació, desempaquetament i configuració de les actualitzacions del sistema executat durant el procés d'actualització.</p>
-      <img src="../img/Comandos9.png" alt="Comandes 9">
+      <p><strong>4.9</strong> Aquesta última imatge mostra el progrés continuat de l'actualització iniciada en el pas anterior. La terminal reflecteix el flux de text que indica el procés automàtic de descàrrega, desempaquetatge i configuració de nous controladors i programari al sistema Ubuntu.</p>
+      <img src="../img/Comandos9.png" alt="Comandos 9">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
@@ -154,7 +154,7 @@
       <p><strong>5.5</strong> Se obre el joc del pacman per a poder jugar.</p>
       <img src="../img/Aplicacions5.png" alt="Aplicacions 5">
       
-      <p><strong>5.6</strong> Com que già ens hem cansat de jugar, decidim esborrar-lo amb sudo apt remove pacman. Confirmem amb una "s" quan ens pregunta si volem continuar, i després comprovem amb el dpkg que ja ha desaparegut per complet del sistema.</p>
+      <p><strong>5.6</strong> Com que ja ens hem cansat de jugar, decidim esborrar-lo amb sudo apt remove pacman. Confirmem amb una "s" quan ens pregunta si volem continuar, i després comprovem amb el dpkg que ja ha desaparegut per complet del sistema.</p>
       <img src="../img/Aplicacions6.png" alt="Aplicacions 6">
       
       <p><strong>5.7</strong> Anem a instal·lar un altre programa (l'editor Geany) però falla perquè necessita un altre arxiu previ que no tenim. Per arreglar aquest desastre de dependències trencades, tirem de la comanda de salvació: sudo apt --fix-broken install.</p>
