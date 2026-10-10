@@ -105,12 +105,34 @@
 
     <article class="apartat" id="apartat4">
       <h2>4. Comandes generals</h2>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. Cada usuari nou s'hauria d'assignar al grup mínim necessari, utilitzant les comandes d'administració bàsica.</p>
-      <ul>
-        <li>Crear l'usuari amb <code>useradd</code>.</li>
-        <li>Assignar contrasenya amb <code>passwd</code>.</li>
-        <li>Afegir l'usuari als grups necessaris amb <code>usermod -aG</code>.</li>
-      </ul>
+      
+      <p><strong>4.1</strong> Aquí empezamos con lo básico para movernos por la terminal. Con pwd el sistema te dice exactamente en qué carpeta estás metido, ls te enseña los archivos por encima, con ls -l te da los detalles (como quién es el dueño o cuánto pesan), y si le metes ls -la te chiva hasta los archivos y carpetas ocultos que empiezan por un puntito.</p>
+      <img src="../img/Comandes1.png" alt="Comandes 1">
+      
+      <p><strong>4.2</strong> En esta captura básicamente volvemos a tirar un ls -la para ver todo lo que hay en nuestra carpeta de usuario y luego usamos la orden cd Baixades/. El comando cd es literal la forma de hacer doble clic en una carpeta para meterte dentro de ella.</p>
+      <img src="../img/Comandes2.png" alt="Comandes 2">
+      
+      <p><strong>4.3</strong> Una vez dentro de la carpeta de descargas, tiramos un ls -l para ver qué tenemos guardado. Nos saca una pedazo de lista con todas las tareas de clase, los PDFs, unos zips de materiales y hasta la imagen ISO del Ubuntu, todo súper detallado con fechas y tamaños.</p>
+      <img src="../img/Comandes3.png" alt="Comandes 3">
+      
+      <p><strong>4.4</strong> Si alguna vez en un examen o práctica se te olvida qué hace un comando, haces lo de esta foto. Al escribir cd --help, la terminal te escupe el manual de instrucciones súper técnico explicándote para qué sirve el comando y qué letras extra le puedes poner para que haga cosas distintas.</p>
+      <img src="../img/Comandes4.png" alt="Comandes 4">
+      
+      <p><strong>4.5</strong> Aquí nos ponemos a crear cosas desde cero. Usamos mkdir Hola para fabricar una carpeta nueva que se llame así, nos metemos dentro con cd Hola, y con la orden echo "Hola" simplemente hacemos que la terminal nos repita esa palabra por pantalla como si fuera un loro.</p>
+      <img src="../img/Comandes5.png" alt="Comandes 5">
+      
+      <p><strong>4.6</strong> Esta es nivel "ahorrar tiempo" en las prácticas. Con un solo mkdir creamos tres carpetas a la vez, con touch fabricamos varios archivos vacíos de golpe (txt y png), luego usamos un editor como nano para escribir dentro, y con cat nota1.txt leemos por pantalla lo que hemos escrito ("Bon dia", "Bona tarde...") sin abrir ningún programa gráfico.</p>
+      <img src="../img/Comandes6.png" alt="Comandes 6">
+      
+      <p><strong>4.7</strong> Esta captura es como el trabajo final, hacemos de todo. Creamos carpetas dentro de carpetas de golpe con mkdir -p, guardamos datos del sistema (uname), la fecha (date) y los usuarios (who) metiéndolo todo dentro de un archivo txt usando > y >>, buscamos cosas concretas con grep, copiamos archivos con cp, y al final guardamos nuestros últimos 15 comandos con history.</p>
+      <img src="../img/Comandes7.png" alt="Comandes 7">
+      
+      <p><strong>4.8</strong> Aquí nos ponemos en "modo dios" (administrador total) escribiendo sudo su. Después de un pequeño fail escribiendo mal la palabra, lanzamos sudo apt update para que el sistema busque en internet qué programas tienen actualizaciones, y luego sudo apt upgrade -y para que instale todas esas novedades del tirón y sin preguntarnos.</p>
+      <img src="../img/Comandos8.png" alt="Comandes 8">
+      
+      <p><strong>4.9</strong> Y bueno, esta última foto es literalmente el ordenador haciendo su magia después de darle la orden anterior. Es la continuación del upgrade, donde solo se ve un montón de texto instalando, desempaquetando y configurando los nuevos drivers y programas de Ubuntu de forma automática.</p>
+      <img src="../img/Comandos9.png" alt="Comandes 9">
+
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
