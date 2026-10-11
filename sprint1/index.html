@@ -64,7 +64,7 @@
       <p><strong>2.2</strong> En esta pestaña hem de seleccionar skip for now i clicar el boto que posar omet.</p>
       <img src="../img/InstalacioIso3.png" alt="Instal·lació ISO 3">
       
-      <p><strong>2.3</strong> En la tercera imatge hem de seleccionar els dos botons el share system with the Ubuntu team i el share error reportthe Ubuntu team.</p>
+      <p><strong>2.3</strong> En la tercera imatge hem de seleccionar els dois botons el share system with the Ubuntu team i el share error reportthe Ubuntu team.</p>
       <img src="../img/InstalacioIso4.png" alt="Instal·lació ISO 4">
       
       <p><strong>2.4</strong> Jo he selecionat els colors que ja estavan prederminats y he clicat el boto que posar següent.</p>
@@ -82,22 +82,22 @@
     <article class="apartat" id="apartat3">
       <h2>3. Xarxa bàsica</h2>
       
-      <p><strong>3.1</strong> En aquesta imatge s'executa l'ordre ip a, que serveix per llistar i mostrar la configuració de totes les targetes i interfícies de xarxa de l'equip. El resultat ens permet veure que la connexió Wi-Fi (l'apartat anomenat wlp0s20f3) està activa i té assignada correctament l'adreça IP local 192.168.1.62 dins de la xarxa.</p>
+      <p><strong>3.1</strong> En aquesta imatge s'executa l'ordre ip a, que serveix per llistar i mostrar la configuració de totes les targetes i interfícies de xarxa de l'equip. El resultat ens permet veure que la connexió Wi-Fi, l'apartat anomenat wlp0s20f3, està activa i té assignada correctament l'adreça IP local 192.168.1.62 dins de la xarxa.</p>
       <img src="../img/Xarxabasica1.png" alt="Xarxa bàsica 1">
       
-      <p><strong>3.2</strong> Aquí es fan servir ordres ping per comprovar si l'ordinador es pot comunicar correctament. Primer s'envien 4 paquets de dades a la pròpia adreça IP de l'equip per confirmar que la targeta de xarxa funciona bé internament (amb un 0% de pèrdua), i tot seguit es comença a comprovar la connexió exterior fent ping a la pàgina de Google.</p>
+      <p><strong>3.2</strong> Aquí es fan servir ordres ping per comprovar si l'ordinador es pot comunicar correctament. Primer s'envien 4 paquets de dades a la pròpia adreça IP de l'equip per confirmar que la targeta de xarxa funciona bé internament, amb un 0% de pèrdua, i tot seguit es comença a comprovar la connexió exterior fent ping a la pàgina de Google.</p>
       <img src="../img/Xarxabasica2.png" alt="Xarxa bàsica 2">
       
-      <p><strong>3.3</strong> Aquesta captura mostra la comprovació final de la connexió a internet enviant paquets d'informació tant al domini de google.com com a una IP pública numèrica (8.8.8.8). Com que tots dos processos acaben amb èxit i reben resposta, es demostra que l'ordinador navega per internet perfectament i que el sistema entén i tradueix bé les adreces web.</p>
+      <p><strong>3.3</strong> Aquesta captura mostra la comprovació final de la connexió a internet enviant paquets d'informació tant al domini de google.com com a una IP pública numèrica 8.8.8.8. Com que tots dos processos acaben amb èxit i reben resposta, es demostra que l'ordinador navega per internet perfectament i que el sistema entén i tradueix bé les adreces web.</p>
       <img src="../img/Xarxabasica3.png" alt="Xarxa bàsica 3">
       
-      <p><strong>3.4</strong> A l'última imatge s'utilitza l'ordre ip route per consultar la taula d'encaminament, que són les rutes que segueix l'ordinador per enviar informació a altres xarxes. El resultat més important és la primera línia (la ruta per defecte), que ens revela que la passarel·la o router té l'adreça IP 192.168.1.1, i és per on surten totes les dades cap a internet.</p>
+      <p><strong>3.4</strong> A l'última imatge s'utilitza l'ordre ip route per consultar la taula d'encaminament, que són les rutes que segueix l'ordinador per enviar informació a altres xarxes. El resultat més important és la primera línia, la ruta per defecte, que ens revela que la passarel·la o router té l'adreça IP 192.168.1.1, i és per on surten totes les dades cap a internet.</p>
       <img src="../img/Xarxabasica4.png" alt="Xarxa bàsica 4">
       
-      <p><strong>3.5</strong> En aquesta captura s'executen dues ordres de terminal molt directes per obtenir informació ràpida de la xarxa. La primera ordre, ip r | grep default, s'utilitza per filtrar les rutes i mostrar exclusivament la línia que indica quina és la passarel·la o router principal de sortida (la 192.168.1.1). La segona ordre, hostname -I, és una drecera molt pràctica que llista únicament les adreces IP locals que té assignades l'ordinador en aquell moment, mostrant de forma neta i sense detalls extra la teva IP principal 192.168.1.62.</p>
+      <p><strong>3.5</strong> En aquesta captura s'executen dues ordres de terminal molt directes per obtenir informació ràpida de la xarxa. La primera ordre, ip r | grep default, s'utilitza per filtrar les rutes i mostrar exclusivament la línia que indica quina és la passarel·la o router principal de sortida, la 192.168.1.1. La segona ordre, hostname -I, és una drecera molt pràctica que llista únicament les adreces IP locals que té assignades l'ordinador en aquell moment, mostrant de forma neta i sense detalls extra la teva IP principal 192.168.1.62.</p>
       <img src="../img/Xarxabasica5.png" alt="Xarxa bàsica 5">
       
-      <p><strong>3.6</strong> A la imatge s'observa l'entorn gràfic de configuració de xarxa del sistema operatiu, on s'estan definint els paràmetres de connexió de manera manual en lloc de fer-ho automàticament. Aquí es pot veure com s'ha establert una adreça IP fixa (192.168.1.62), la màscara de xarxa (255.255.255.0), la passarel·la per connectar-se al router (192.168.1.1) i el servidor DNS de Google (8.8.8.8), permetent controlar exactament quina configuració tindrà l'equip sense usar la terminal.</p>
+      <p><strong>3.6</strong> A la imatge s'observa l'entorn gràfic de configuració de xarxa del sistema operatiu, on s'estan definint els paràmetres de connexió de manera manual en lloc de fer-ho automàticament. Aquí es pot veure com s'ha establert una adreça IP fixa 192.168.1.62, la màscara de xarxa 255.255.255.0, la passarel·la per connectar-se al router 192.168.1.1 i el servidor DNS de Google 8.8.8.8, permetent controlar exactament quina configuració tindrà l'equip sense usar la terminal.</p>
       <img src="../img/Xarxabasica6.png" alt="Xarxa bàsica 6">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
@@ -106,7 +106,7 @@
     <article class="apartat" id="apartat4">
       <h2>4. Comandes generals</h2>
       
-      <p><strong>4.1</strong> Aquí comencem amb el funcionament bàsic de la terminal. Amb pwd el sistema mostra la ruta exacta de la carpeta on et trobes en aquest moment. L'ordre ls llista els fitxers generals de la carpeta, mentre que ls -l ofereix informació detallada com els permisos, el propietari i la grandària. Si s'afegeix el paràmetre -la (ls -la), es mostren absolutament tots els elements, incloent-hi els fitxers i carpetes ocultes que comencen per un punt.</p>
+      <p><strong>4.1</strong> Aquí comencem amb el funcionament bàsic de la terminal. Amb pwd el sistema mostra la ruta exacta de la carpeta on et trobes en aquest moment. L'ordre ls llista els fitxers generals de la carpeta, mentre que ls -l ofereix informació detallada com els permisos, el propietari i la grandària. Si s'afegeix el paràmetre -la, ls -la, es mostren absolutament tots els elements, incloent-hi els fitxers i carpetes ocultes que comencen per un punt.</p>
       <img src="../img/Comandes1.png" alt="Comandes 1">
       
       <p><strong>4.2</strong> En aquesta captura es repeteix ls -la per revisar tots els elements disponibles a la carpeta d'usuari i, a continuació, s'utilitza la instrucció cd Baixades/. El comandament cd s'empra per canviar de directori i entrar a l'interior d'una carpeta específica.</p>
@@ -118,13 +118,13 @@
       <p><strong>4.4</strong> Davant de qualsevol dubte sobre el funcionament d'una ordre durant una pràctica o examen, es pot utilitzar el sistema d'ajuda integrat. En escriure cd --help, la terminal mostra el manual tècnic oficial amb les opcions i paràmetres addicionals que accepta el comandament.</p>
       <img src="../img/Comandes4.png" alt="Comandes 4">
       
-      <p><strong>4.5</strong> En aquest punt es creen elements des de zero. S'empra mkdir Hola per generar un directori nou anomenat així, s'hi accedeix amb cd Hola, i amb l'ordre echo "Hola" es fa que la terminal reprodueixi aquesta mateixa paraula directament per pantalla.</p>
+      <p><strong>4.5</strong> En aquest punt es creen elements des de zero. S'empra mkdir Hola per generar un directori nou anomenat així, s'hi accedeix amb cd Hola, i amb l'ordre echo Hola es fa que la terminal reprodueixi aquesta mateixa paraula directament per pantalla.</p>
       <img src="../img/Comandes5.png" alt="Comandes 5">
       
       <p><strong>4.6</strong> Aquesta secció tracta de l'optimització de processos a la terminal. Amb una sola instrucció mkdir es creen múltiples carpetes simultàniament, i amb touch es generen diversos arxius buits de tipus text i imatge de cop. Posteriorment, s'utilitza un editor com nano per afegir contingut i s'empra cat nota1.txt per llegir el text generat directament des de la consola sense necessitat d'obrir cap interfície gràfica.</p>
       <img src="../img/Comandes6.png" alt="Comandes 6">
       
-      <p><strong>4.7</strong> Aquesta captura reflecteix una combinació d'operacions complexes. Es creen jerarquies de carpetes senceres de manera automàtica amb mkdir -p, s'emmagatzemen dades del sistema amb uname, la data amb date i els usuaris actius amb who redirigint el flux mitjançant > i >> cap a un arxiu de text. També s'hi inclou la cerca de patrons amb grep, la còpia de fitxers amb cp i la consulta dels últims quinze comandaments executats amb history.</p>
+      <p><strong>4.7</strong> Aquesta captura reflecteix una combinació d'operacions complexes. Es creen jerarquies de carpetes senceres de manera automàtica amb mkdir -p, s'emmagatzemen dades del sistema amb uname, la data amb date i els usuaris actius amb who redirigint el flux mitjançant &gt; i &gt;&gt; cap a un arxiu de text. També s'hi inclou la cerca de patrons amb grep, la còpia de fitxers amb cp i la consulta dels últims quinze comandaments executats amb history.</p>
       <img src="../img/Comandes7.png" alt="Comandes 7">
       
       <p><strong>4.8</strong> Aquí s'eleven els privilegis del sistema mitjançant sudo su. A continuació, s'executa sudo apt update per comprovar si hi ha paquets pendents d'actualització als repositoris d'internet, seguit de sudo apt upgrade -y per procedir a la instal·lació automàtica de totes les novetats sense requerir confirmació addicional.</p>
@@ -157,7 +157,7 @@
       <p><strong>5.6</strong> Com que ja ens hem cansat de jugar, decidim esborrar-lo amb sudo apt remove pacman. Confirmem amb una "s" quan ens pregunta si volem continuar, i després comprovem amb el dpkg que ja ha desaparegut per complet del sistema.</p>
       <img src="../img/Aplicacions6.png" alt="Aplicacions 6">
       
-      <p><strong>5.7</strong> Anem a instal·lar un altre programa (l'editor Geany) però falla perquè necessita un altre arxiu previ que no tenim. Per arreglar aquest desastre de dependències trencades, tirem de la comanda de salvació: sudo apt --fix-broken install.</p>
+      <p><strong>5.7</strong> Anem a instal·lar un altre programa, l'editor Geany, però falla perquè necessita un altre arxiu previ que no tenim. Per arreglar aquest desastre de dependències trencades, tirem de la comanda de salvació: sudo apt --fix-broken install.</p>
       <img src="../img/Aplicacions7.png" alt="Aplicacions 7">
       
       <p><strong>5.8</strong> El sistema es descarrega el que faltava, arregla el trencament automàticament i ens deixa instal·lat el Geany. Per rematar-ho, escrivim geany --version i ens confirma que tenim la versió 2.0 instal·lada.</p>
@@ -169,7 +169,7 @@
       <p><strong>5.10</strong> Per últim, si volem esborrar un programa però que no quedi ni rastre dels seus fitxers de configuració perduts, utilitzem sudo apt purge geany geany-common. Això fa una neteja total i deixa l'ordinador com si mai l'haguéssim posat.</p>
       <img src="../img/Aplicacions10.png" alt="Aplicacions 10">
       
-      <p><strong>5.11</strong> Aquí executem l'ordre sudo apt install aptitude a la terminal. El sistema es posa a descarregar i instal·lar aquest gestor de paquets avançat (l'Aptitude), que serveix pràcticament per al mateix que l'apt però amb una interfície molt més xula i potent per gestionar aplicacions i dependències.</p>
+      <p><strong>5.11</strong> Aquí executem l'ordre sudo apt install aptitude a la terminal. El sistema es posa a descarregar i instal·lar aquest gestor de paquets avançat, l'Aptitude, que serveix pràcticament per al mateix que l'apt però amb una interfície molt més xula i potent per gestionar aplicacions i dependències.</p>
       <img src="../img/Aplicacions11.png" alt="Aplicacions 11">
       
       <p><strong>5.12</strong> Fem servir l'Aptitude per instal·lar el programa d'edició d'imatge GIMP amb sudo aptitude install gimp. Com es veu a la pantalla, ens llista un munt de llibreries i dependències necessàries, i li diem que "Y" per acceptar i començar a descarregar tot el paquet.</p>
@@ -195,4 +195,4 @@
 </footer>
 
 </body>
-</html>
+</html>     
