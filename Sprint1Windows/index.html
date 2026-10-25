@@ -147,7 +147,19 @@
 
     <article class="apartat" id="apartat5">
       <h2>5 Xarxa</h2>
-      <p>Apartat en curs de desenvolupament.</p>
+      
+      <p><strong>5.1</strong> Amb NAT, s'executen els comandaments ipconfig per veure la IP assignada, ping google.com i ping 8.8.8.8 per comprovar la connexió a Internet amb èxit amb un 0% de pèrdua.</p>
+      <img src="../img/Sprint1Windows5.1.png" alt="Sprint 1 Windows 5.1">
+      
+      <p><strong>5.2</strong> Desconnectant el cable de xarxa a VirtualBox, s'executen els comandaments ping google.com i ping 8.8.8.8, els quals fallen mostrant Temps d'espera esgotat i Host de destí inaccessible perquè la màquina està sense xarxa.</p>
+      <img src="../img/Sprint1Windows5.2.png" alt="Sprint 1 Windows 5.2">
+      
+      <p><strong>5.3</strong> En tornar a connectar el cable i canviar l'adaptador a Adaptador pont, s'executen els comandaments ipconfig, ping google.com i ping 8.8.8.8, on ipconfig mostra una IP de la xarxa local real i els pings a Google tornen a respondre perfectament.</p>
+      <img src="../img/Sprint1Windows5.3.png" alt="Sprint 1 Windows 5.3">
+      
+      <p><strong>5.4</strong> Configurant un DNS manual incorrecte 1.2.3.4, s'executen els comandaments ping google.com i ping 8.8.8.8, on el primer falla en no poder resoldre el nom, però el segon funciona bé en atacar directament a la IP.</p>
+      <img src="../img/Sprint1Windows5.4.png" alt="Sprint 1 Windows 5.4">
+
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
