@@ -148,16 +148,16 @@
     <article class="apartat" id="apartat5">
       <h2>5 Xarxa</h2>
       
-      <p><strong>5.1</strong> Amb NAT, s'executen els comandaments ipconfig per veure la IP assignada, ping google.com i ping 8.8.8.8 per comprovar la connexió a Internet amb èxit amb un 0% de pèrdua.</p>
+      <p><strong>5.1</strong> Primer posem l'ordinador en mode NAT i executem els comandaments ipconfig, ping google.com i ping 8.8.8.8. Amb el comandament ipconfig veiem la IP que ens dóna, com per exemple la 10.0.2.15, i amb els pings comprovem que tenim internet i respon tot bé sense errors.</p>
       <img src="../img/Sprint1Windows5.1.png" alt="Sprint 1 Windows 5.1">
       
-      <p><strong>5.2</strong> Desconnectant el cable de xarxa a VirtualBox, s'executen els comandaments ping google.com i ping 8.8.8.8, els quals fallen mostrant Temps d'espera esgotat i Host de destí inaccessible perquè la màquina està sense xarxa.</p>
+      <p><strong>5.2</strong> Després desconnectem el cable de xarxa a VirtualBox i tornem a provar amb els comandaments ping google.com i ping 8.8.8.8. Com que no hi ha connexió, el primer falla perquè no troba la pàgina i el segon diu temps d'espera esgotat, de manera que les proves de connexió cap a 8.8.8.8 mostren el missatge: host de destí inaccessible.</p>
       <img src="../img/Sprint1Windows5.2.png" alt="Sprint 1 Windows 5.2">
       
-      <p><strong>5.3</strong> En tornar a connectar el cable i canviar l'adaptador a Adaptador pont, s'executen els comandaments ipconfig, ping google.com i ping 8.8.8.8, on ipconfig mostra una IP de la xarxa local real i els pings a Google tornen a respondre perfectament.</p>
+      <p><strong>5.3</strong> Llavors tornem a connectar el cable i posem Adaptador pont, executant altra vegada ipconfig, ping google.com i ping 8.8.8.8. Ara el ipconfig ens dóna una IP de la nostra xarxa de casa, com per exemple la 192.168.1.69, i els pings funcionen perfectament perquè ja estem connectats a la xarxa real.</p>
       <img src="../img/Sprint1Windows5.3.png" alt="Sprint 1 Windows 5.3">
       
-      <p><strong>5.4</strong> Configurant un DNS manual incorrecte 1.2.3.4, s'executen els comandaments ping google.com i ping 8.8.8.8, on el primer falla en no poder resoldre el nom, però el segon funciona bé en atacar directament a la IP.</p>
+      <p><strong>5.4</strong> Per últim, posem un DNS inventat o malament 1.2.3.4 a Windows i tornem a fer ping google.com i ping 8.8.8.8. El ping google.com no funciona perquè el DNS no sap traduir el nom de la web, però el ping 8.8.8.8 sí que va bé perquè ataca directament a la IP numèrica.</p>
       <img src="../img/Sprint1Windows5.4.png" alt="Sprint 1 Windows 5.4">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
