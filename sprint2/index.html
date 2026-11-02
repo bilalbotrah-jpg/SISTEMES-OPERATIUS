@@ -29,47 +29,47 @@
         <tr><th>#</th><th>Apartat</th></tr>
       </thead>
       <tbody>
-        <tr><td>0</td><td><a href="#preparar-el-cas">0 Preparar el cas</a></td></tr>
-        <tr><td>1</td><td><a href="#nivell1">1 Reconeixement · veure els processos</a></td></tr>
-        <tr><td>2</td><td><a href="#nivell2">2 Qui consumeix més?</a></td></tr>
-        <tr><td>3</td><td><a href="#nivell3">3 Interrogatori · filtrar amb ps</a></td></tr>
-        <tr><td>4</td><td><a href="#nivell4">4 La descàrrega urgent · primer i segon pla</a></td></tr>
-        <tr><td>5</td><td><a href="#nivell5">5 Prioritat a la descàrrega</a></td></tr>
-        <tr><td>6</td><td><a href="#nivell6">6 Neutralitzar els intrusos</a></td></tr>
-        <tr><td>7</td><td><a href="#nivell7">7 Que la descàrrega no es perdi</a></td></tr>
+        <tr><td>0</td><td><a href="#preparar-el-cas">0. Preparar el cas</a></td></tr>
+        <tr><td>1</td><td><a href="#nivell1">1. Reconeixement · veure els processos</a></td></tr>
+        <tr><td>2</td><td><a href="#nivell2">2. Qui consumeix més?</a></td></tr>
+        <tr><td>3</td><td><a href="#nivell3">3. Interrogatori · filtrar amb ps</a></td></tr>
+        <tr><td>4</td><td><a href="#nivell4">4. La descàrrega urgent · primer i segon pla</a></td></tr>
+        <tr><td>5</td><td><a href="#nivell5">5. Prioritat a la descàrrega</a></td></tr>
+        <tr><td>6</td><td><a href="#nivell6">6. Neutralitzar els intrusos</a></td></tr>
+        <tr><td>7</td><td><a href="#nivell7">7. Que la descàrrega no es perdi</a></td></tr>
       </tbody>
     </table>
 
     <article class="apartat" id="preparar-el-cas">
-      <h2>0 Preparar el cas</h2>
+      <h2>0. Preparar el cas</h2>
       <p>Es crea i s'accedeix a la carpeta de treball ~/missio mitjançant les ordres mkdir i cd, procedint a redactar els cinc scripts necessaris (minador, backup_nocturn, espia, descarrega.sh i sospitosos.sh) amb l'editor nano. Com que els fitxers no disposen inicialment de permisos d'execució i mostren un error de Permission denied, s'empra chmod +x per atorgar-los permisos a tots de cop i finalment executar ./sospitosos.sh, el qual engega els processos paràsits en segon pla deixant el servidor lent.</p>
       <img src="../img/Nivell0.png" alt="Preparar el cas">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
     <article class="apartat" id="nivell1">
-      <h2>1 Reconeixement · veure els processos</h2>
+      <h2>1. Reconeixement · veure els processos</h2>
       <p>S'empra la comanda pstree -p $USER per visualitzar de manera gràfica i jeràrquica l'arbre de tots els processos en execució de l'usuari actual. A la imatge es comprova com els processos paràsits (backup_nocturn, espia i els dos minador) no pengen de la shell de la terminal, sinó que apareixen directament sota systemd (PID 1) perquè es van quedar orfes un cop el script llançador va finalitzar.</p>
       <img src="../img/Nivell1.png" alt="Reconeixement · veure els processos">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
     <article class="apartat" id="nivell2">
-      <h2>2 Qui consumeix més?</h2>
+      <h2>2. Qui consumeix més?</h2>
       <p>S'executa la utilitat interactiva de monitoratge top per examinar en temps real l'estat del sistema i el consum de recursos. Prement la tecla P, la llista s'ordena per consum de CPU, destacant a la part superior els dos processos minador consumint al voltant d'un 49% de CPU cadascún degut a la limitació del nucli, mentre que a la capçalera es pot apreciar l'indicador de càrrega (load average) elevat.</p>
       <img src="../img/Nivell2.png" alt="Qui consumeix més?">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
     <article class="apartat" id="nivell3">
-      <h2>3 Interrogatori · filtrar amb ps</h2>
+      <h2>3. Interrogatori · filtrar amb ps</h2>
       <p>Es fan servir filtres avançats de cerca com ps aux | grep [m]inador per evitar la línia paràsita del propi filtre, cerques directes amb pgrep i l'extracció de columnes específiques amb l'ordre ps -o pid,ppid,user,stat,etime,%cpu,comm -C per als diferents sospitosos. Això permet obtenir amb exactitud els identificadors (PID) i comprovar que el seu procés pare (PPID) és el PID 2324 corresponent a systemd.</p>
       <img src="../img/Nivell3.png" alt="Interrogatori · filtrar amb ps">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
     <article class="apartat" id="nivell4">
-      <h2>4 La descàrrega urgent · primer i segon pla</h2>
+      <h2>4. La descàrrega urgent · primer i segon pla</h2>
       <p>4.1 S'utilitza la comanda watch -n 1 cat progres.txt a la terminal dreta (T2) per refrescar automàticament cada segon el contingut del fitxer de progrés de la descàrrega simulada ("Descarregant ubuntu.iso... 18% (64 s)"), permetent vigilar l'evolució i el percentatge de la tasca en temps real de manera continuada.</p>
       <img src="../img/Nivell4.1.png" alt="La descàrrega urgent 4.1">
       
@@ -80,7 +80,7 @@
     </article>
 
     <article class="apartat" id="nivell5">
-      <h2>5 Prioritat a la descàrrega</h2>
+      <h2>5. Prioritat a la descàrrega</h2>
       <p>5.1 S'empra l'ordre top -p $(pgrep -d, 'minador|descarrega') per visualitzar i monitorar només aquells PID concrets. Es veu clarament reflectit l'efecte d'haver aplicat prèviament l'ordre d'administrador sudo renice -n -10 -p &lt;PID&gt; sobre el procés de descàrrega (PID 7899), el qual aconsegueix un ús de CPU del 98,7% gràcies a la prioritat NI -10, reduint considerablement el rendiment dels minadors.</p>
       <img src="../img/Nivell5.1.png" alt="Prioritat a la descàrrega 5.1">
       
@@ -91,14 +91,14 @@
     </article>
 
     <article class="apartat" id="nivell6">
-      <h2>6 Neutralitzar els intrusos</h2>
+      <h2>6. Neutralitzar els intrusos</h2>
       <p>Es visualitza l'ús de kill per eliminar els minadors mitjançant la senyal SIGTERM, l'intent fallit d'aturar l'script espia (el qual intercepta l'avís mostrant el missatge de la trampa o trap), la resolució forçosa d'aquest últim mitjançant la senyal ininterrumpible kill -9 (SIGKILL), i finalment la congelació temporal (STOP) i reactivació (CONT) del procés legítim de còpia de seguretat backup_nocturn sense arribar a destruir-lo.</p>
       <img src="../img/Nivell6.png" alt="Neutralitzar els intrusos">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
 
     <article class="apartat" id="nivell7">
-      <h2>7 Que la descàrrega no es perdi</h2>
+      <h2>7. Que la descàrrega no es perdi</h2>
       <p>7.1 Mostra el missatge final de confirmació "ubuntu.iso COMPLETADA en 62 s" generat per l'script descarrega.sh i reflectit al monitor watch de la terminal T2, comprovant així que la descàrrega ha conclòs correctament de manera íntegra sense patir interrupcions per tancaments previs de sessió.</p>
       <img src="../img/Nivell7.1.png" alt="Que la descàrrega no es perdi 7.1">
       
