@@ -70,10 +70,10 @@
 
     <article class="apartat" id="nivell4">
       <h2>4 La descàrrega urgent · primer i segon pla</h2>
-      <p>1. S'utilitza la comanda watch -n 1 cat progres.txt a la terminal dreta (T2) per refrescar automàticament cada segon el contingut del fitxer de progrés de la descàrrega simulada ("Descarregant ubuntu.iso... 18% (64 s)"), permetent vigilar l'evolució i el percentatge de la tasca en temps real de manera continuada.</p>
+      <p>4.1 S'utilitza la comanda watch -n 1 cat progres.txt a la terminal dreta (T2) per refrescar automàticament cada segon el contingut del fitxer de progrés de la descàrrega simulada ("Descarregant ubuntu.iso... 18% (64 s)"), permetent vigilar l'evolució i el percentatge de la tasca en temps real de manera continuada.</p>
       <img src="../img/Nivell4.1.png" alt="La descàrrega urgent 4.1">
       
-      <p>2. Mostra la seqüència al terminal T1 on s'atura temporalment la descàrrega amb la combinació Ctrl + Z (passant a estat Stopped), la consulta del treball mitjançant jobs -l per veure el seu número de treball i PID, i la seva reanudació i enviament definitiu al segon pla amb bg %1, la qual cosa allibera la terminal de treball principal.</p>
+      <p>4.2 Mostra la seqüència al terminal T1 on s'atura temporalment la descàrrega amb la combinació Ctrl + Z (passant a estat Stopped), la consulta del treball mitjançant jobs -l per veure el seu número de treball i PID, i la seva reanudació i enviament definitiu al segon pla amb bg %1, la qual cosa allibera la terminal de treball principal.</p>
       <img src="../img/Nivell4.2.png" alt="La descàrrega urgent 4.2">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
@@ -81,10 +81,10 @@
 
     <article class="apartat" id="nivell5">
       <h2>5 Prioritat a la descàrrega</h2>
-      <p>1. S'empra l'ordre top -p $(pgrep -d, 'minador|descarrega') per visualitzar i monitorar només aquells PID concrets. Es veu clarament reflectit l'efecte d'haver aplicat prèviament l'ordre d'administrador sudo renice -n -10 -p &lt;PID&gt; sobre el procés de descàrrega (PID 7899), el qual aconsegueix un ús de CPU del 98,7% gràcies a la prioritat NI -10, reduint considerablement el rendiment dels minadors.</p>
+      <p>5.1 S'empra l'ordre top -p $(pgrep -d, 'minador|descarrega') per visualitzar i monitorar només aquells PID concrets. Es veu clarament reflectit l'efecte d'haver aplicat prèviament l'ordre d'administrador sudo renice -n -10 -p &lt;PID&gt; sobre el procés de descàrrega (PID 7899), el qual aconsegueix un ús de CPU del 98,7% gràcies a la prioritat NI -10, reduint considerablement el rendiment dels minadors.</p>
       <img src="../img/Nivell5.1.png" alt="Prioritat a la descàrrega 5.1">
       
-      <p>2. Mostra com a conseqüència directa de l'ajust de prioritat del nivell anterior, el percentatge de la descàrrega al fitxer progres.txt visualitzat a T2 ha avançat de manera accelerada fins al 75% ("Descarregant ubuntu.iso... 75% (67 s)") degut a haver rebut gairebé tot el potencial de càlcul de la CPU en detriment dels programes paràsits.</p>
+      <p>5.2 Mostra com a conseqüència directa de l'ajust de prioritat del nivell anterior, el percentatge de la descàrrega al fitxer progres.txt visualitzat a T2 ha avançat de manera accelerada fins al 75% ("Descarregant ubuntu.iso... 75% (67 s)") degut a haver rebut gairebé tot el potencial de càlcul de la CPU en detriment dels programes paràsits.</p>
       <img src="../img/Nivell5.2.png" alt="Prioritat a la descàrrega 5.2">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
@@ -99,10 +99,10 @@
 
     <article class="apartat" id="nivell7">
       <h2>7 Que la descàrrega no es perdi</h2>
-      <p>1. Mostra el missatge final de confirmació "ubuntu.iso COMPLETADA en 62 s" generat per l'script descarrega.sh i reflectit al monitor watch de la terminal T2, comprovant així que la descàrrega ha conclòs correctament de manera íntegra sense patir interrupcions per tancaments previs de sessió.</p>
+      <p>7.1 Mostra el missatge final de confirmació "ubuntu.iso COMPLETADA en 62 s" generat per l'script descarrega.sh i reflectit al monitor watch de la terminal T2, comprovant així que la descàrrega ha conclòs correctament de manera íntegra sense patir interrupcions per tancaments previs de sessió.</p>
       <img src="../img/Nivell7.1.png" alt="Que la descàrrega no es perdi 7.1">
       
-      <p>2. Mostra la sortida de l'ordre d'inspecció de l'arbre de processos pstree -ps $(pgrep descarrega), a través de la qual es comprova que, gràcies a l'ús previ de l'ordre nohup abans de tancar el terminal original, el procés de la descàrrega ha ignorat la senyal de tancament SIGHUP i ha estat adoptat de manera segura directament per systemd (PID 1).</p>
+      <p>7.2 Mostra la sortida de l'ordre d'inspecció de l'arbre de processos pstree -ps $(pgrep descarrega), a través de la qual es comprova que, gràcies a l'ús previ de l'ordre nohup abans de tancar el terminal original, el procés de la descàrrega ha ignorat la senyal de tancament SIGHUP i ha estat adoptat de manera segura directament per systemd (PID 1).</p>
       <img src="../img/Nivell7.2.png" alt="Que la descàrrega no es perdi 7.2">
 
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
