@@ -1,4 +1,3 @@
-/* ---------- Estils afegits per a targetes i botons de sprints ---------- */
 .targeta-sprint {
   display: flex;
   justify-content: space-between;
@@ -13,7 +12,7 @@
 
 .targeta-sprint:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(18, 37, 66, 0.12);
+  box-shadow: 0 4px 14px rgba(12, 110, 115, 0.18);
   border-color: var(--teal);
 }
 
@@ -41,7 +40,7 @@
   background-color: var(--teal);
   color: var(--blanc) !important;
   padding: 10px 18px;
-  border-radius: 6px;
+  border-radius: var(--radi);
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none !important;
@@ -57,16 +56,4 @@
   background-color: var(--vora);
   color: var(--tinta-suau);
   pointer-events: none;
-}
-
-@media (max-width: 640px) {
-  .targeta-sprint {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-  .btn-sprint {
-    width: 100%;
-    text-align: center;
-  }
 }
